@@ -55,7 +55,8 @@ public class AliyunPushMessageReceiver extends MessageReceiver {
     @Override
     protected void onMessage(Context context, CPushMessage cPushMessage) {
 
-        super.onMessage(context, cPushMessage);
+        // avoid calling abstract method
+        // super.onMessage(context, cPushMessage);
 
         WritableMap params = Arguments.createMap();
         params.putString("messageId", cPushMessage.getMessageId());
@@ -70,7 +71,8 @@ public class AliyunPushMessageReceiver extends MessageReceiver {
     protected void onNotification(Context context, String title, String content, Map<String, String> extraMap) {
         FLog.d(ReactConstants.TAG, "onNotification.");
 
-        super.onNotification(context, title, content, extraMap);
+        // void calling abstract method
+        // super.onNotification(context, title, content, extraMap);
 
         WritableMap params = Arguments.createMap();
         params.putString("body", content);
@@ -91,7 +93,8 @@ public class AliyunPushMessageReceiver extends MessageReceiver {
     protected void onNotificationOpened(Context context, String title, String content, String extraMap) {
         FLog.d(ReactConstants.TAG, "onNotificationOpened.");
 
-        super.onNotificationOpened(context, title, content, extraMap);
+        // avoid calling abstract method
+        // super.onNotificationOpened(context, title, content, extraMap);
 
         WritableMap params = Arguments.createMap();
         params.putString("body", content);
@@ -108,7 +111,8 @@ public class AliyunPushMessageReceiver extends MessageReceiver {
     protected void onNotificationClickedWithNoAction(Context context, String title, String content, String extraMap) {
         FLog.d(ReactConstants.TAG, "onNotificationClickedWithNoAction.");
 
-        super.onNotificationOpened(context, title, content, extraMap);
+        // avoid calling abstract method
+        // super.onNotificationOpened(context, title, content, extraMap);
 
         WritableMap params = Arguments.createMap();
         params.putString("body", content);
@@ -125,7 +129,8 @@ public class AliyunPushMessageReceiver extends MessageReceiver {
     protected void onNotificationRemoved(Context context, String messageId){
         FLog.d(ReactConstants.TAG, "onNotificationRemoved: messageId=" +  messageId);
 
-        super.onNotificationRemoved(context, messageId);
+        // avoid calling abstract method
+        // super.onNotificationRemoved(context, messageId);
 
         WritableMap params = Arguments.createMap();
         params.putString("messageId", messageId);
@@ -140,7 +145,8 @@ public class AliyunPushMessageReceiver extends MessageReceiver {
     public void onNotificationReceivedInApp(Context context, String title, String content, Map<String, String> extraMap, int openType, String openActivity, String openUrl) {
         FLog.d(ReactConstants.TAG, "onNotificationReceivedInApp");
 
-        super.onNotificationReceivedInApp(context, title, content, extraMap, openType, openActivity, openUrl);
+        // avoid calling abstract method
+        // super.onNotificationReceivedInApp(context, title, content, extraMap, openType, openActivity, openUrl);
 
         WritableMap params = Arguments.createMap();
         params.putString("content", content);
