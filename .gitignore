@@ -27,10 +27,14 @@ project.xcworkspace
 
 # Android/IJ
 #
+android/build/
+android/gradle/
 /build/
 .idea
 .gradle
 local.properties
+gradlew
+gradlew.bat
 
 # node.js
 #
